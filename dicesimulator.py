@@ -7,6 +7,6 @@ def main():
     print("press enter to roll a dice")
     input ()
     for i in range (2):
-    print("you rolled a", dice())
+        print("you rolled a", dice())
 
 main()
