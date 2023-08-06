@@ -1,22 +1,26 @@
-import random 
+import random
 
-def numguess():
-
-    n = int(input ("enter a number from one to ten "))
-    comp =random.randint(1,10)
-    print("computer guessed" , comp)
-    if (n==comp ):
-        print("you guessed it right")
-    elif  ((n>comp)):
-        print('too high')
-    else:
-        print ('too low ')
-        return None
-
-def main ():
-
-    while True :
-        numguess ()
-        again = input("do you want another guess? ")
+def guess_number():
+  
+  number = random.randint(1, 10)
+  attempts = 0
+  guess = None
+  while guess != number:
+    guess = int(input("Guess a number between 1 and 10: "))
+    attempts += 1
+    if guess < number:
+      print("Your guess is too low.")
+    elif guess > number:
+      print("Your guess is too high.")
+    if attempts==3:
+      break 
     
+  else:
+    print(f"Congratulations! You guessed the number in {attempts} attempts.")
+
+
+def main():
+   
+   guess_number()
+ 
 main()
