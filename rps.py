@@ -43,7 +43,7 @@ def rps(rock,paper,scissors,):
 
 
 def main():
-    rps('r','p','s',)
+    rps('rock','paper','scissors',)
            
 main ()
 
